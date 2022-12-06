@@ -6,3 +6,5 @@ console.log("Multi-line comments with /* */");
 /*
 Multi-line comments 
 */
+
+// Single line comments
