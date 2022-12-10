@@ -30,3 +30,12 @@ let subtractNumbers = (num1, num2) => {
 	console.log(num1 - num2);
 }
 subtractNumbers(20, 7);
+
+// Return functions
+
+let multiply = (num1, num2) => {
+	return num1 * num2;
+	// anything under return is NOT run
+}
+let result = multiply(4, 7);
+console.log(result);
