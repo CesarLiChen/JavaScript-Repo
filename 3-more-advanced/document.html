@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Document - Deeper dive</title>
+	</head>
+	<body>
+		<h1 id="header">My Website</h1>
+		<p>Welcome to this site</p>
+
+		<script type="text/javascript">
+			console.log(document.body);
+
+			console.log(document.readyState);
+
+			setTimeout(
+				() => {console.log(document.readyState);},
+				2000);
+
+			let newH1 = document.createElement("h1");
+			newH1.innerText = "New H1 Text HERE";
+			console.log(newH1);
+
+			let h = document.getElementById("header");
+			console.log(h);
+
+			// For selecting all of the same tag.
+			// document.querySelectorAll("h1");
+
+			// For grabing first one
+			//document.querySelector("h1");
+
+			// For selecting all tags with same class.
+			// document.getElementsByClassName("className");
+		</script>
+	</body>
+</html>
