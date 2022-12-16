@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>The Window Object</title>
+	</head>
+	<body>
+		<h1>My Website</h1>
+		<p>Welcome to this site</p>
+
+		<!-- 'this' keyword refers to
+			the window class -->
+
+		<script type="text/javascript">
+			console.log("Hello");
+			console.log(window);
+			console.log(this === window);
+			window.console.log("'window' not needed because it is such an important class");
+			console.log(document);
+			console.log(location);
+			console.log(navigator);
+			console.log(screenX);
+			console.log(screenY);
+			speechSynthesis.speak(new SpeechSynthesisUtterance("Hello"));
+		</script>
+	</body>
+</html>
