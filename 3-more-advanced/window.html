@@ -16,6 +16,7 @@
 			the window class -->
 
 		<script type="text/javascript">
+			// Properties
 			console.log("Hello");
 			console.log(window);
 			console.log(this === window);
@@ -26,6 +27,28 @@
 			console.log(screenX);
 			console.log(screenY);
 			speechSynthesis.speak(new SpeechSynthesisUtterance("Hello"));
+
+			// Methods
+			alert("Hello World");
+
+			let name = prompt("enter name:");
+			console.log(name);
+
+			let ans = confirm("Are you sure?");
+			console.log(ans);
+
+			// setTimeout(function, miliseconds)
+			// setInterval(function, miliseconds) ==> continuous
+			setTimeout(() => {console.log("done");}, 5000);
+			// setInterval(() => {console.log("continuous");}, 2000);
+
+			// Open and close window
+			let wind = open();
+			setTimeout(
+				() => {
+					wind.close();
+				},
+				3000);
 		</script>
 	</body>
 </html>
