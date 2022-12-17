@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Elements - Properties and Methods</title>
+	</head>
+	<body>
+
+		<!-- All objects inside of DOM are technically 'nodes' -->
+		<!-- But html elements represented in the DOM, specifically,
+			inherit another specialized interface: the Element Interface-->
+		<h1 id="header">My Website</h1>
+		<p class="c1 c2 c3" name="myP" id="text">Welcome to this site</p>
+
+		<script type="text/javascript">
+			let text = document.getElementById("text");
+			console.log(text.attributes);
+			console.log(text.attributes.name);
+			console.log(text.classList);
+			console.log(text.className);
+			console.log(text.innerHTML);
+			console.log(document.body.innerHTML);
+			console.log(text.tagName);
+
+			text.addEventListener("click", () => console.log("clicked"));
+			// text.animate(keyframes, options)
+		</script>
+
+	</body>
