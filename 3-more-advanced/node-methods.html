@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Node Methods</title>
+	</head>
+	<body>
+
+		<!-- Node is any object inside the DOM -->
+
+		<h1 id="header">My Website</h1>
+		<ul id="list">
+			<li>Apples</li>
+			<li>Oranges</li>
+			<li>Grapes</li>
+		</ul>
+
+		<script type="text/javascript">
+			let list = document.getElementById("list");
+
+			let newItem = document.createElement("li");
+			newItem.textContent = "Pears";
+			list.appendChild(newItem);
+
+			console.log(list.contains(newItem));
+
+			let newItem2 = document.createElement("li");
+			newItem2.textContent = "Blueberry";
+			list.insertBefore(newItem2, list.firstChild);
+
+			list.removeChild(list.lastChild);
+		</script>
+
+	</body>
+</html>
