@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body {background-color: #424242;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jquery</title>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+
+		<!-- Fast, small, featured-rich
+			JavaScript library -->
+
+		<!-- CDN: Content Delivery Network.
+			Way to include Jquery code inside html file -->
+
+		<h1>Shopping List</h1>
+		<h1>Shopping List 2</h1>
+		<p> Below is a list of the items needed at the grocery store.</p>
+
+		<ul id="list">
+			<li class="fruit">Apples</li>
+			<li>Milk</li>
+		</ul>
+
+		<p id="footer">Shopping is fun!</p>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				console.log($("h1").get(1));
+
+				$("#list").click((event) => {
+					console.log("Clicked list");
+				});
+
+				let items = $("ul").children();
+				console.log(items);
+
+				$("h1").next("p").css("color", "blue");
+				$("#footer").css("color", "white");
+
+				$("h1").animate({
+					opacity: 0.5,
+					fontSize: "50px"
+				});
+			});
+		</script>
+	</body>
+</html>
