@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+
+			/* body * */
+			div, article, p {
+				margin: 20px;
+				border: 1px solid red;
+			}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Propagation</title>
+	</head>
+	<body>
+		<!-- Propagation -->
+		<div onclick="alert('div')">
+			div
+			<article onclick="alert('article')">
+				article
+				<p onclick="alert('paragraph')">
+					paragraph
+				</p>				
+			</article>
+		</div>
+
+		<!-- Targeting -->
+		<div id="myDiv">
+			div2
+			<article>
+				article2
+				<p>
+					paragraph2
+				</p>
+			</article>
+		</div>
+
+		<script type="text/javascript">
+			let myDiv = document.getElementById("myDiv");
+			myDiv.addEventListener("click", function(){
+				console.log(event.target);
+			});
+		</script>
+	</body>
+</html>
