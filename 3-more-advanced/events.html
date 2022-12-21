@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Events</title>
+	</head>
+	<body>
+		<h1 id="header">My Website</h1>
+		<p id="text" id="text">Welcome to this site</p>
+
+		<script type="text/javascript">
+
+			document.getElementById("header").onclick = function(){
+				console.log("clicked");
+				console.log(this);
+			}
+
+			let text = document.getElementById("text");
+			text.addEventListener("click", () => {
+				console.log("Text clicked");
+			});
+
+			text.addEventListener("mouseover", () => {
+				console.log("Text hover");
+			});
+		</script>
+
+	</body>
+</html>
