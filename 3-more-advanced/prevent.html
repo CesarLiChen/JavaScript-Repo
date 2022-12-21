@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { 
+				background-color: #424242;
+			}
+
+			#text {
+				font-size: 100px;
+			}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Prevent Default</title>
+	</head>
+	<body>
+
+		<p id="text">
+			Right click me!
+		</p>
+
+		<script type="text/javascript">
+			let text = document.getElementById("text");
+			text.oncontextmenu = function(event){
+				console.log("right-clicked");
+				event.preventDefault();
+			}
+		</script>
+	</body>
+</html>
