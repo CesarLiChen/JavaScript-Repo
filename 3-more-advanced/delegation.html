@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #424242;}
+			}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Delegation</title>
+	</head>
+	<body>
+
+		<!--
+			Event delegation:
+			Delegate handling of events to parent elements.
+		-->
+		<ul id="list">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+			<li>Four</li>
+		</ul>
+
+		<script type="text/javascript">
+			let list = document.getElementById("list");
+			list.addEventListener("click", function(){
+				console.log(event.target);
+				event.target.style.color = "blue";
+			});
+		</script>
+	</body>
+</html>
