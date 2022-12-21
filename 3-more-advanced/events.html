@@ -12,6 +12,8 @@
 		<h1 id="header">My Website</h1>
 		<p id="text" id="text">Welcome to this site</p>
 
+		<input type="text" onkeypress="console.log(this.value)"/>
+		
 		<script type="text/javascript">
 
 			document.getElementById("header").onclick = function(){
@@ -26,6 +28,18 @@
 
 			text.addEventListener("mouseover", () => {
 				console.log("Text hover");
+			});
+
+			text.addEventListener("contextmenu", () => {
+				console.log("right-clicked");
+			});
+
+			text.addEventListener("mouseup", () => {
+				console.log("stopped click");
+			});
+
+			text.addEventListener("mousedown", () => {
+				console.log("mouse down");
 			});
 		</script>
 
