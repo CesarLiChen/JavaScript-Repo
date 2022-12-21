@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body {background-color: #424242;}
+			a {font-size: 40px;}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Page Lifecycle</title>
+	</head>
+	<body>
+
+		<h1>Website</h1>
+		<a href="https://www.duckduckgo.com">Leave site</a>
+
+		<script type="text/javascript">
+			// DOM tree built, pictures/styles not yet.
+			document.addEventListener("DOMContentLoaded", function(){
+				alert("DOM tree built");
+			});
+
+			// Window gets loaded after.
+			window.onload = () => {
+				alert("Window Loaded");
+			};
+
+			// When leaving site,
+			// browsers handle differently
+			window.onbeforeunload = () => {
+				return "Ya sure?";
+			}
+
+			window.onunload = () => {
+				alert("left site");
+			}
+
+		</script>
+
+	</body>
+</html>
