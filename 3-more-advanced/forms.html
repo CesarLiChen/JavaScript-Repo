@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body {background-color: #424242;}
+
+			input{
+				border-radius: 10px;
+			}
+
+			textarea {
+				box-shadow: 10px 5px 5px black;
+			}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Forms</title>
+	</head>
+	<body>
+
+		<!-- Small intro to forms -->
+		<form action="page" method="post">
+			<div>
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="user_name" />
+			</div>
+
+			<div>
+				<label for="comment">Comment: </label>
+				<textarea id="comment" name="user_comment"></textarea>
+			</div>
+
+			<button type="submit">Send Comment</button>
+		</form>
+
+	</body>
+</html>
